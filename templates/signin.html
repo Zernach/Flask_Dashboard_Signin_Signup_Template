@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% set active_page = "signin" %}
+{% block content %}
+
+<div class='row'>
+	<div class="col-md-1"><br></div>
+	<div class="col-md-6">
+		<div class="container">
+
+			<form action="/signin" method="post">
+				<h3 class='intro-title'>The World Is Your Sandbox</h3>
+				<h4 style='color: #24ccff99;'>Sign In</h4>
+				<br>
+				<div class='row'>
+					<div class='col-sm-2'>
+						<label for="inputEmail" style='color: #c1c1c1;'>Email address</label>
+					</div>
+					<div class='col-sm-10'>
+						<input class='user-pass-inputs' type="email" id="inputEmail" name="name" placeholder="Email address" required autofocus>
+					</div>
+				</div>
+				<br>
+				<div class='row'>
+					<div class='col-sm-2'>
+						<label for="inputPassword" style='color: #c1c1c1;'>Password</label>
+					</div>
+					<div class='col-sm-10'>
+						<input class='user-pass-inputs' type="password" id="inputPassword" name="pass" placeholder="Password" required >
+					</div>
+				</div>
+				<br>
+				<br>
+				<button class="btn btn-lg btn-block button-color" type="submit"><b>LOGIN</b></button>
+			</form>
+			<br>
+			{% if s %}
+			<div class="alert alert-success">
+				<h2 style='color:#1C1C1C;'>{{s}}</h2>
+			</div>
+			{% endif %}
+
+			{% if us %}
+			<div class="alert alert-danger">
+				<h2 style='color:#1C1C1C;'>{{us}}</h2>
+			</div>
+			{% endif %}
+
+			<p>Don't have an account? <a href='/signup'>Sign Up</a></p>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div style='text-align: center;'>
+			<img src="{{url_for('static', filename='images/globe.png')}}" id='featured-image'
+				width="90%">
+		</div>
+	</div>
+	<div class="col-md-1"><br></div>
+</div>
+
+{% endblock %}

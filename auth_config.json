@@ -1,0 +1,8 @@
+{
+    "apiKey": "addYourOwnWebAPIKeyFromProjectSettings",
+    "authDomain": "YOUR_APP_ID.firebaseapp.com",
+    "databaseURL": "https://YOUR_APP_ID.firebaseio.com/",
+    "projectId": "YOUR_APP_ID",
+    "storageBucket": "YOUR_APP_ID.appspot.com",
+    "messagingSenderId": "012345678912"
+}
