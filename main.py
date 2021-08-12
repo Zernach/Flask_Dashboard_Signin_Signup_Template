@@ -17,12 +17,13 @@ import os
 app = Flask(__name__)
 
 # Firestore database connection initalized
-cred = credentials.Certificate(FIRESTORE_CREDENTIALS_JSON_PATH)
-firebase = initialize_app(cred)
-# Pyrebase used for auth/sign-in
-pb = pyrebase.initialize_app(json.load(open(FIREBASE_AUTHENTICATION_JSON_PATH)))
-db = firestore.client()
+# cred = credentials.Certificate(FIRESTORE_CREDENTIALS_JSON_PATH)
+# firebase = initialize_app(cred)
+# db = firestore.client()
 session_data = dbfunctions.createFreshSessionData()
+
+# # Pyrebase used for auth/sign-in
+pb = pyrebase.initialize_app(json.load(open(FIREBASE_AUTHENTICATION_JSON_PATH)))
 
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
